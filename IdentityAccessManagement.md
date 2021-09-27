@@ -1,5 +1,5 @@
 # IAM 	
-	-manage users, groups, policies, roles, user credential, password policies, MFA and API keys.
+	- manage users, groups, policies, roles, user credential, password policies, MFA and API keys.
 	
 # IAM Users
 	- entity representing person or service
