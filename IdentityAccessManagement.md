@@ -93,29 +93,29 @@
 			§ an explicit allow overrides the implicit deny
 			§ an explicit deny overrides any explicit allows
 	
-#####		- Types of policies
-#####			a. Identity based policies
-				- control what actions the identity can perform on which resources, and under what conditions.
-				- can be managed or inline policies
-					® managed policies are standalone identity based policies that can be attached to multiple users, groups and roles 
-					® inline policies that are created and managed and are embedded directly into a single user, group or role.
+#####	- Types of policies
+#####	a. Identity based policies
+			- control what actions the identity can perform on which resources, and under what conditions.
+			- can be managed or inline policies
+				® managed policies are standalone identity based policies that can be attached to multiple users, groups and roles 
+				® inline policies that are created and managed and are embedded directly into a single user, group or role.
 					
-#####		b. Resource based policies
-				- control what actions a specified principal can perform on that resource and under what condition.
-				- are inline policies applied to individual resource
-				- Type of resource based policies
-					® Trust policy - attached to the an IAM role
-						◊ trust policies define which accounts, users, roles, and federated users can assume the role.
+#####	b. Resource based policies
+			- control what actions a specified principal can perform on that resource and under what condition.
+			- are inline policies applied to individual resource
+			- Type of resource based policies
+				® Trust policy - attached to the an IAM role
+				◊ trust policies define which accounts, users, roles, and federated users can assume the role.
 	
-####		- JSON example
-			{
+####	JSON example
+			```{
 			  "Version": "2012-10-17",
 			  "Statement": {
 			    "Effect": "Allow",
 			    "Action": "dynamodb:*",
 			    "Resource": "arn:aws:dynamodb:us-east-2:123456789012:table/Books"
 			  }
-			}
+			}```
 	
 #	AWS Security Token Service (STS)
 		- allows to request temporary, limited privilege credential for users 
