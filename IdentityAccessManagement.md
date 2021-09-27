@@ -162,7 +162,7 @@
 			§ resource data
 	
 #	Authentication
-#####	- Types of authentication
+#####	Types of authentication
 #####	§ console authentication: 
 			® using username and password in AWS management console
 			® users can be allowed to change password
