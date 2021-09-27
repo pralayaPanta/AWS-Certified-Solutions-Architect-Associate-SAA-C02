@@ -1,39 +1,39 @@
 	- manage users, groups, policies, roles, user credential, password policies, MFA and API keys
 	
 # IAM Users
-		- entity representing person or service
-		- users can be assigned
-				□ an access key ID and secret access key
-					® for programmatic access to AWS API, CLI, SDKs
-					® are not same as password
-					® cannot be used to login into AWS console
-					® can be generated once; must be regenerated if lost
-				□ a password 
-					® to access management console
+	- entity representing person or service
+	- users can be assigned
+		□ an access key ID and secret access key
+			® for programmatic access to AWS API, CLI, SDKs
+			® are not same as password
+			® cannot be used to login into AWS console
+			® can be generated once; must be regenerated if lost
+		□ a password 
+			® to access management console
 					
-		- user cannot access anything by default
-		- up to 5000 users can be created in a AWS account
-		- each user account has unique name called Amazon Resource Number (ARN)
+	- user cannot access anything by default
+	- up to 5000 users can be created in a AWS account
+	- each user account has unique name called Amazon Resource Number (ARN)
 		
-##		- root user
-				□ created with email address used to sign up for AWS
-					® known as root user credentials
-				□ full administrative permissions
-				□ best practices for root user
-					® do not use root account for day to day functions
-					® do not share root user credential
-					® create an IAM user and assign administrative permissions
-					® enable Multifactor Authentication 
+##### - root user
+		□ created with email address used to sign up for AWS
+				® known as root user credentials
+		□ full administrative permissions
+		□ best practices for root user
+				® do not use root account for day to day functions
+				® do not share root user credential
+				® create an IAM user and assign administrative permissions
+				® enable Multifactor Authentication 
 					
-##		- service accounts
-				□ IAM user account that represent applications
+##### - service accounts
+			□ IAM user account that represent applications
 			
-##		- federating existing users
-				□ users with existing accounts in a organisation and are allowed to login in AWS
-				□ if users already have identities in a corporate directory
-					® federate using SAML 2.0 
-				□ if users already have internet identities 
-					® federate using identity provider like OpenID Connect
+##### - federating existing users
+		□ users with existing accounts in a organisation and are allowed to login in AWS
+		□ if users already have identities in a corporate directory
+			® federate using SAML 2.0 
+		□ if users already have internet identities 
+			® federate using identity provider like OpenID Connect
 	
 #	IAM Groups
 		- collection of users 
@@ -43,14 +43,14 @@
 		- groups can be used to assign permissions to users
 		- use principal of least privilege when assigning permissions
 	
-##	Creating users and group in AWS console
+#####	Creating users and group in AWS console
 			1. Go to IAM > Users > Add users
 			2. On the details page provide username, password and choose permissions
 			3. On permission add user to group by creating a new group
 			4. Attach Tag as per requirement
 			5. Review and create user
 		
-##	Creating use and group in AWS CLI
+#####	Creating use and group in AWS CLI
 		- Create user group
 			§ aws iam create-group --group-name <group name>
 			§ aws iam list-groups
@@ -93,14 +93,14 @@
 			§ an explicit allow overrides the implicit deny
 			§ an explicit deny overrides any explicit allows
 	
-##		- Types of policies
-###			a. Identity based policies
+#####		- Types of policies
+#####			a. Identity based policies
 				- control what actions the identity can perform on which resources, and under what conditions.
 				- can be managed or inline policies
 					® managed policies are standalone identity based policies that can be attached to multiple users, groups and roles 
 					® inline policies that are created and managed and are embedded directly into a single user, group or role.
 					
-###			b. Resource based policies
+#####		b. Resource based policies
 				- control what actions a specified principal can perform on that resource and under what condition.
 				- are inline policies applied to individual resource
 				- Type of resource based policies
@@ -162,22 +162,22 @@
 			§ resource data
 	
 #	Authentication
-		- Types of authentication
-##			§ console authentication: 
-					® using username and password in AWS management console
-					® users can be allowed to change password
+#####	- Types of authentication
+#####	§ console authentication: 
+			® using username and password in AWS management console
+			® users can be allowed to change password
 					
-##			§ API or CLI authentication: 
-					® using access key and secret key
-					® one user can be assigned two active access keys at a time
-					® can be used to make programmatic calls to AWS
-					® keys can be created, modified, viewed or rotated
-					® secret is return during the time of creation only
-					® user access key can be disabled
+#####	§ API or CLI authentication: 
+			® using access key and secret key
+			® one user can be assigned two active access keys at a time
+			® can be used to make programmatic calls to AWS
+			® keys can be created, modified, viewed or rotated
+			® secret is return during the time of creation only
+			® user access key can be disabled
 					
-##			§ Service certificates
-					® authentication using TLS certificates
-					® AWS Certificate Manger should be used to manage certificates
+#####	§ Service certificates
+			® authentication using TLS certificates
+			® AWS Certificate Manger should be used to manage certificates
 		
 			
 		
@@ -284,5 +284,5 @@
 			§ use services like CloudFront, CloudTrail, CloudWatch, Config and S3 to monitor AWS activity
 		
 	
-[https://docs.aws.amazon.com/iam/index.html]
+LINK: [https://docs.aws.amazon.com/iam/index.html]
 
