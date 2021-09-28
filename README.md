@@ -6,4 +6,4 @@
 
 ## Notes
 
-### [Identity and Access Management](/IdentityAccessManagement.md)
+### [Identity and Access Management](/notes/IdentityAccessManagement.md)
