@@ -4,6 +4,6 @@
 
 
 
-## Contents
+## Notes
 
 ### [Identity and Access Management](/IdentityAccessManagement.md)
